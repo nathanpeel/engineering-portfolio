@@ -120,7 +120,7 @@ export default function Home() {
           and world around me.
         </p>
         <p>
-          I am a huge fan of Avatar: The Last Airbender. Regarding my manga, so
+          I am a huge fan of Avatar: The Last Airbender. Regarding manga, so
           far I have read Monster by Naoki Urasawa, Berserk by Kentaro Miura,
           and I am now reading Vagaond by Takehiko Inoue. I had my own
           expereince with story writing when I wrote my book{" "}
