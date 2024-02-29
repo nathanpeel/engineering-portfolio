@@ -17,11 +17,10 @@ nunc dea removebitur canes hi mori quam passam. Data dedit reformet; comitata
 obscurum; qua specta nitor latura; responde saepius terra habentia retroque
 miserabile tuta. Cecidere duri septemfluus suum superis equos, ad quies.
 
-```js
-    boolean -= viral.gifMms.udp_meta(clean_network, storageUtilityPort,
-            user_rom_sql);
-    modulePmu -= -2;
-    var bar = compile_card;
+```python
+    def banan ():
+        return 'oh yeah!'
+    print(banana())
 ```
 
 Illa vixque supersunt crescit fugientibus posuitque vultu margine, in sagittas

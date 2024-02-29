@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <div className="border-x border-darkgray px-10">
       {/*Hero section*/}
       <section>
         <h1>Hi, I&apos;m Nathan👋</h1>
@@ -139,6 +139,6 @@ export default function Home() {
         </p>
       </section>
       {/* Add link to substack subscription */}
-    </main>
+    </div>
   );
 }
