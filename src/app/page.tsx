@@ -138,6 +138,7 @@ export default function Home() {
           author and writer, with plans to write many more books.
         </p>
       </section>
+      {/* Add link to substack subscription */}
     </main>
   );
 }
