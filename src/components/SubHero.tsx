@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function SubHero() {
   return (
     <section>
-      <div className="flex flex-col px-20 sm:px-48 min-h-[40dvh] items-start gap-5">
-        <p className="sm:text-5xl text-2xl font-medium">
+      <div className="flex flex-col px-16 sm:px-48 min-h-[40dvh] items-start gap-5">
+        <p className="sm:text-5xl text-xl font-medium">
           I am a full-stack software engineer, philosophy enthusiast, optimist,
           and a citizen of the world. I am passionate about contributing to
           determined teams that solve problems to help people and the Earth. I

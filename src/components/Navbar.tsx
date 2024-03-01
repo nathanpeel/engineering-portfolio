@@ -15,7 +15,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="w-full flex justify-center py-5 gap-16 text-xl font-medium">
+    <header className="w-full flex justify-center py-5 sm:gap-16 gap-6 text-xl font-medium">
       <Link
         href="/"
         className={

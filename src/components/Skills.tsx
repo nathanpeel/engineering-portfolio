@@ -1,4 +1,3 @@
-import Image from "next/image";
 const skillsArray = [
   "React",
   "Next.js",
@@ -20,58 +19,39 @@ const skillsArray = [
 export default function SkillsList() {
   const lineOne = skillsArray.slice(0, Math.floor(skillsArray.length / 2));
   const lineTwo = skillsArray.slice(Math.floor(skillsArray.length / 2));
+  const lineArray = [lineOne, lineTwo];
 
   return (
     <section
-      className="min-h-[50dvh] bg-lgreen text-white flex flex-col justify-center text-6xl font-semibold"
+      className="min-h-[50dvh] bg-lgreen text-white flex flex-col justify-center sm:text-6xl text-4xl font-semibold"
       id="container">
-      <div id="list-wrapper">
-        <div className="flex gap-14 top" id="top">
-          {lineOne.map((el) => {
-            return (
-              <div
-                key={crypto.randomUUID()}
-                className="flex items-center gap-3">
-                <div className="w-14 h-14 relative">
-                  <Image
-                    className="object-fill"
-                    src={`/${el
-                      .toLowerCase()
-                      .replace("/", "-")
-                      .replace(".", "-")}.svg`}
-                    alt={`${el} logo`}
-                    fill
-                    sizes=""
-                  />
-                </div>
-                <p className="whitespace-nowrap">{el}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="flex gap-14 bottom" id="bottom">
-          {lineTwo.map((el) => {
-            return (
-              <div
-                key={crypto.randomUUID()}
-                className="flex items-center gap-3">
-                <div className="w-14 h-14 relative">
-                  <Image
-                    className="object-fill"
-                    src={`/${el
-                      .toLowerCase()
-                      .replace("/", "-")
-                      .replace(".", "-")}.svg`}
-                    alt={`${el} logo`}
-                    fill
-                    sizes=""
-                  />
-                </div>
-                <p className="whitespace-nowrap">{el}</p>
-              </div>
-            );
-          })}
-        </div>
+      <div id="list-wrapper" className="flex flex-col sm:gap-10 gap-4">
+        {lineArray.map((line, index) => {
+          const animator = index == 0 ? "top" : "bottom";
+          return (
+            <div className={`flex sm:gap-14 gap-8 ${animator}`}>
+              {line.map((el) => {
+                return (
+                  <div
+                    key={crypto.randomUUID()}
+                    className="flex items-center justify-center gap-3">
+                    <div className="sm:w-14 sm:h-14 w-10 h-10 relative flex items-center">
+                      <img
+                        src={`/${el
+                          .toLowerCase()
+                          .replace("/", "")
+                          .replace(".", "")
+                          .replace(" ", "")}.svg`}
+                        alt={`${el} logo`}
+                      />
+                    </div>
+                    <p className="whitespace-nowrap">{el}</p>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

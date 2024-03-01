@@ -10,7 +10,7 @@ body {
 @keyframes slideRight {
 
   0% {
-    transform: translateX(-150vw);
+    transform: translateX(-160vw);
   }
 
   100% {
@@ -25,35 +25,99 @@ body {
   }
 
   100% {
-    transform: translateX(-110vw);
+    transform: translateX(-120vw);
   }
 }
 
 .top {
-  animation: slideLeft 15s linear infinite;
+  animation: slideLeft 8s linear infinite;
 }
 
 .bottom {
-  animation: slideRight 15s linear infinite;
+  animation: slideRight 11s linear infinite;
 }
 
- @media (max-width: 1000px) {
-   /* .top {
-     animation-duration: 4s;
+ @media (min-width: 1300px) {
+   .top {
+     animation-duration: 6s;
    }
 
    .bottom {
-     animation-duration: 4s;
-   } */
+     animation-duration: 8s;
+   }
+
+   @keyframes slideRight {
+
+    0% {
+        transform: translateX(-70vw);
+      }
+    
+      100% {
+        transform: translateX(10vw);
+      }
+   }
+
+   @keyframes slideLeft {
+
+      0% {
+          transform: translateX(20vw);
+        }
+      
+        100% {
+          transform: translateX(-50vw);
+        }
+   }
+ }
+
+ @media (max-width: 1050px) and (min-width: 701px) {
+   .top {
+     animation-duration: 8s;
+   }
+
+   .bottom {
+     animation-duration: 11s;
+   }
+
+   @keyframes slideRight {
+
+     0% {
+       transform: translateX(-230vw);
+     }
+
+     100% {
+       transform: translateX(10vw);
+     }
+   }
+
+   @keyframes slideLeft {
+
+     0% {
+       transform: translateX(10vw);
+     }
+
+     100% {
+       transform: translateX(-200vw);
+     }
+   }
+ }
+
+ @media (max-width: 700px) {
+   .top {
+     animation-duration: 8s;
+   }
+
+   .bottom {
+     animation-duration: 11s;
+   }
 
      @keyframes slideRight {
   
        0% {
-         transform: translateX(-510vw);
+         transform: translateX(-290vw);
        }
   
        100% {
-         transform: translateX(5vw);
+         transform: translateX(10vw);
        }
      }
   
@@ -64,7 +128,39 @@ body {
        }
   
        100% {
-         transform: translateX(-425vw);
+         transform: translateX(-230vw);
+       }
+     }
+ }
+
+ @media (max-width: 500px) {
+   .top {
+     animation-duration: 11s;
+   }
+
+   .bottom {
+     animation-duration: 13s;
+   }
+
+     @keyframes slideRight {
+  
+       0% {
+         transform: translateX(-430vw);
+       }
+  
+       100% {
+         transform: translateX(20vw);
+       }
+     }
+  
+     @keyframes slideLeft {
+  
+       0% {
+         transform: translateX(20vw);
+       }
+  
+       100% {
+         transform: translateX(-350vw);
        }
      }
  }
