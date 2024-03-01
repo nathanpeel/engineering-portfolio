@@ -24,7 +24,7 @@ export default function EmailButton({ children, text, styles = "" }: props) {
       <button onClick={handleClick} className={styles}>
         {children || text}
       </button>
-      {showMessage && <div className="absolute -bottom-5 text-darkgray/70">Email copied!</div>}
+      {showMessage && <div className="text-base absolute -bottom-9 text-darkgray/70">Email copied!</div>}
     </div>
   );
 }

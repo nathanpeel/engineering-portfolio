@@ -3,17 +3,68 @@
 @tailwind utilities;
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #E8EEF2;
+  color: #0C583D
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes slideRight {
+
+  0% {
+    transform: translateX(-150vw);
+  }
+
+  100% {
+    transform: translateX(5vw);
   }
 }
+
+@keyframes slideLeft {
+
+  0% {
+    transform: translateX(10vw);
+  }
+
+  100% {
+    transform: translateX(-110vw);
+  }
+}
+
+.top {
+  animation: slideLeft 15s linear infinite;
+}
+
+.bottom {
+  animation: slideRight 15s linear infinite;
+}
+
+ @media (max-width: 1000px) {
+   /* .top {
+     animation-duration: 4s;
+   }
+
+   .bottom {
+     animation-duration: 4s;
+   } */
+
+     @keyframes slideRight {
+  
+       0% {
+         transform: translateX(-510vw);
+       }
+  
+       100% {
+         transform: translateX(5vw);
+       }
+     }
+  
+     @keyframes slideLeft {
+  
+       0% {
+         transform: translateX(15vw);
+       }
+  
+       100% {
+         transform: translateX(-425vw);
+       }
+     }
+ }

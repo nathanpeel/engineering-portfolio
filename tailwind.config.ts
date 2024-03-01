@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  important: true, 
+  important: true,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,13 +15,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-      lightgray: "#CFD0D7",
-      darkgray: "#393C46",
-      blue: "#017BEC",
-      green: "#0D8F58"
-    },
+        white: '#E8EEF2',
+        lgreen: '#0C583D',
+        dgreen: '#073928',
+        lblue: '#3B8CCF',
+        dblue: '#0A599A'
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animated')],
 };
 export default config;
