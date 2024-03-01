@@ -1,26 +1,30 @@
-'use client'
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 type props = {
-  text: string,
-  className: string
-}
+  children?: React.ReactNode;
+  text?: string;
+  styles?: string;
+};
 
-function EmailButton({text, className}: props) {
+export default function EmailButton({ children, text, styles = "" }: props) {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = () => {
-    navigator.clipboard.writeText('peeljnathan@gmail.com');
+    navigator.clipboard.writeText("peeljnathan@gmail.com");
     setShowMessage(true);
-    setTimeout(() => { setShowMessage(false) }, 1700);
-  }
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 1700);
+  };
 
   return (
-    <div>
-      <button onClick={handleClick}>
-        {text}
+    <div className="flex flex-col items-center relative">
+      <button onClick={handleClick} className={styles}>
+        {children || text}
       </button>
+      {showMessage && <div className="absolute -bottom-5 text-darkgray/70">Email copied!</div>}
     </div>
-  )
+  );
 }

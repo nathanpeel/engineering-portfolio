@@ -23,7 +23,7 @@ export default function post({ params }: { params: { slug: string } }) {
               const match = /language-(\w+)/.exec(className || "");
               return match ? (
                 <div className="w-full py-5">
-                  <div className="bg-gradient-to-br from-green to-blue p-1 rounded-xl">
+                  <div className="bg-gradient-to-br from-green to-blue p-1 rounded-2xl">
                     <SyntaxHighlighter
                       wrapLongLines={true}
                       language={match[1]}
