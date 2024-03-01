@@ -11,30 +11,30 @@ export default function Hero() {
         Software Engineer
       </h2>
       <div className="flex gap-10 mb-7">
-        <div className="w-10 h-10 relative">
-          <Link
-            href="https://www.linkedin.com/in/nathaniel-peel/"
-            target="_blank">
-            <Image
-              className="object-fill"
-              src="/linkedin-logo.svg"
-              alt="LinkedIn Logo"
-              fill
-              sizes=""
-            />
-          </Link>
-        </div>
-        <div className="w-10 h-10 relative">
-          <Link href="https://github.com/nathanpeel" target="_blank">
-            <Image
-              className="object-fill"
-              src="/github-logo.svg"
-              alt="GitHub Logo"
-              fill
-              sizes=""
-            />
-          </Link>
-        </div>
+        <Link
+          href="https://www.linkedin.com/in/nathaniel-peel/"
+          target="_blank"
+          className="relative w-10 h-10">
+          <Image
+            className="object-fill absolute"
+            src="/linkedin-logo.svg"
+            alt="LinkedIn Logo"
+            fill
+            sizes=""
+          />
+        </Link>
+        <Link
+          href="https://github.com/nathanpeel"
+          target="_blank"
+          className="w-10 h-10 relative">
+          <Image
+            className="object-fill absolute"
+            src="/github-logo.svg"
+            alt="GitHub Logo"
+            fill
+            sizes=""
+          />
+        </Link>
       </div>
     </section>
   );

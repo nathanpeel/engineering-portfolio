@@ -29,7 +29,7 @@ export default function SkillsList() {
         {lineArray.map((line, index) => {
           const animator = index == 0 ? "top" : "bottom";
           return (
-            <div className={`flex sm:gap-14 gap-8 ${animator}`} id={crypto.randomUUID()}>
+            <div className={`flex sm:gap-14 gap-8 ${animator}`} key={crypto.randomUUID()}>
               {line.map((el) => {
                 return (
                   <div
