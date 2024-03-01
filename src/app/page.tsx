@@ -86,7 +86,7 @@ export default function Home() {
       {/* Featured Blog Posts Section*/}
       <section className="border-b border-darkgray">
         <div className="flex flex-col items-start p-5">
-          <h2 className="text-xl font-medium mb-2 animate-fade-up">
+          <h2 className="text-xl font-medium mb-2">
             I also have a blog
           </h2>
           <div>
