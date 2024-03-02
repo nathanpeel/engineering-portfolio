@@ -1,5 +1,7 @@
 import Link from "next/link";
-export default function Footer() {
+
+// Basic footer with links to techs used
+export default function Footer():JSX.Element {
   return (
     <footer className="mt-auto bottom-0 p-4 border-t border-darkgray text-center">
       Made by Nathan Peel using{" "}

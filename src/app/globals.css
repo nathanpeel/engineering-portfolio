@@ -7,17 +7,7 @@ body {
   color: #0C583D
 }
 
-@keyframes slideRight {
-
-  0% {
-    transform: translateX(-160vw);
-  }
-
-  100% {
-    transform: translateX(5vw);
-  }
-}
-
+/* These are the keyframes for moving the top skills list to the left */
 @keyframes slideLeft {
 
   0% {
@@ -28,139 +18,158 @@ body {
     transform: translateX(-120vw);
   }
 }
+/* These are the keyframes for moving the bottom skills list to the right */
+@keyframes slideRight {
 
+  0% {
+    transform: translateX(-160vw);
+  }
+
+  100% {
+    transform: translateX(5vw);
+  }
+}
+/* Note that the top class slides faster than the bottom class because it takes longer to complete its translation */
+/* a class that animates the slideLeft animation infinitely */
 .top {
   animation: slideLeft 8s linear infinite;
 }
-
+/* a class that animates the slideRight animation infinitely */
 .bottom {
   animation: slideRight 11s linear infinite;
 }
 
- @media (min-width: 1300px) {
-   .top {
-     animation-duration: 6s;
-   }
+/* The translations and animation speeds are adjusted for general media sizes. It is not perfect responsiveness, but it is not necessary. The goal is to eventually animate the translations on scroll or some other more consistent variation. Also, it is ideal to move all of these css styles into the tailwind config file if possible.*/
 
-   .bottom {
-     animation-duration: 8s;
-   }
 
-   @keyframes slideRight {
+/* Adjusts the translateX for media sizes 1300px in width or larger. These are usually monitors. */
+@media (min-width: 1300px) {
+  .top {
+    animation-duration: 6s;
+  }
+
+  .bottom {
+    animation-duration: 8s;
+  }
+
+  @keyframes slideLeft {
 
     0% {
-        transform: translateX(-70vw);
+        transform: translateX(20vw);
       }
     
       100% {
-        transform: translateX(10vw);
+        transform: translateX(-50vw);
       }
-   }
+  } 
 
-   @keyframes slideLeft {
+  @keyframes slideRight {
+
+  0% {
+      transform: translateX(-70vw);
+    }
+  
+    100% {
+      transform: translateX(10vw);
+    }
+  }
+}
+
+ /* Adjusts the translateX for media sizes with widths between 701 and 1050 pixels. This size is usually laptops and tablets. */
+@media (max-width: 1050px) and (min-width: 701px) {
+  .top {
+    animation-duration: 8s;
+  }
+
+  .bottom {
+    animation-duration: 11s;
+  }
+
+  @keyframes slideLeft {
+
+    0% {
+      transform: translateX(10vw);
+    }
+
+    100% {
+      transform: translateX(-200vw);
+    }
+  }
+
+  @keyframes slideRight {
+
+    0% {
+      transform: translateX(-230vw);
+    }
+
+    100% {
+      transform: translateX(10vw);
+    }
+  }
+}
+
+ /* Adjusts the translateX for media sizes with widths of 700px and under. This is usually large phones like iPhone Pro Max. */
+@media (max-width: 700px) {
+  .top {
+    animation-duration: 8s;
+  }
+
+  .bottom {
+    animation-duration: 11s;
+  }
+
+  @keyframes slideLeft {
+
+    0% {
+      transform: translateX(15vw);
+    }
+
+    100% {
+      transform: translateX(-230vw);
+    }
+    }
+
+    @keyframes slideRight {
 
       0% {
-          transform: translateX(20vw);
-        }
-      
-        100% {
-          transform: translateX(-50vw);
-        }
-   }
- }
+        transform: translateX(-290vw);
+      }
 
- @media (max-width: 1050px) and (min-width: 701px) {
-   .top {
-     animation-duration: 8s;
-   }
+      100% {
+        transform: translateX(10vw);
+      }
+    }
+}
 
-   .bottom {
-     animation-duration: 11s;
-   }
+/* Adjusts the translateX for media sizes with widths of 500px or smaller. This is usually smaller phones such as iPhone SE */
+@media (max-width: 500px) {
+  .top {
+    animation-duration: 11s;
+  }
 
-   @keyframes slideRight {
+  .bottom {
+    animation-duration: 13s;
+  }
 
-     0% {
-       transform: translateX(-230vw);
-     }
+  @keyframes slideLeft {
 
-     100% {
-       transform: translateX(10vw);
-     }
-   }
+    0% {
+      transform: translateX(20vw);
+    }
 
-   @keyframes slideLeft {
+    100% {
+      transform: translateX(-350vw);
+    }
+  }
 
-     0% {
-       transform: translateX(10vw);
-     }
+  @keyframes slideRight {
 
-     100% {
-       transform: translateX(-200vw);
-     }
-   }
- }
+    0% {
+      transform: translateX(-430vw);
+    }
 
- @media (max-width: 700px) {
-   .top {
-     animation-duration: 8s;
-   }
-
-   .bottom {
-     animation-duration: 11s;
-   }
-
-     @keyframes slideRight {
-  
-       0% {
-         transform: translateX(-290vw);
-       }
-  
-       100% {
-         transform: translateX(10vw);
-       }
-     }
-  
-     @keyframes slideLeft {
-  
-       0% {
-         transform: translateX(15vw);
-       }
-  
-       100% {
-         transform: translateX(-230vw);
-       }
-     }
- }
-
- @media (max-width: 500px) {
-   .top {
-     animation-duration: 11s;
-   }
-
-   .bottom {
-     animation-duration: 13s;
-   }
-
-     @keyframes slideRight {
-  
-       0% {
-         transform: translateX(-430vw);
-       }
-  
-       100% {
-         transform: translateX(20vw);
-       }
-     }
-  
-     @keyframes slideLeft {
-  
-       0% {
-         transform: translateX(20vw);
-       }
-  
-       100% {
-         transform: translateX(-350vw);
-       }
-     }
- }
+    100% {
+      transform: translateX(20vw);
+    }
+  }
+}

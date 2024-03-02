@@ -1,15 +1,17 @@
-export default function Work() {
+//displays a list of experiences and projects.
+//Will add dynamic route pages for each project/role later
+export default function Work(): JSX.Element {
   return (
-    <main>
-      <section>
+    <section>
+      <div>
         <h1>My work</h1>
-      </section>
-      <section>
+      </div>
+      <div>
         <h2>Roles</h2>
-      </section>
-      <section>
+      </div>
+      <div>
         <h2>Projects</h2>
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }

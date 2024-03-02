@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Fairly simple Hero page with name and socials. 
+//I would like to add some sort of element of interest later. Maybe 3D objects
 export default function Hero() {
   return (
     <section className="flex flex-col items-center min-h-dvh justify-center pb-32">

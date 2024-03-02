@@ -1,21 +1,21 @@
 import Link from "next/link";
-import Image from "next/image";
 import TextGradient from "@/components/TextGradient";
-import EmailButton from "@/components/Email";
 import Hero from "@/components/Hero";
 import SubHero from "@/components/SubHero";
 import Skills from "@/components/Skills";
 
-export default function Home() {
+/** This component wraps all the other sections of the home page, stored in the components folder **/
+/** This component will shrink as other sections are divided into their own components **/
+export default function Home():JSX.Element {
   return (
     <div>
       <Hero />
       <SubHero />
       <Skills />
-      {/* Expereince section */}
+      {/* Experience section */}
       <section className="border-b border-darkgray">
         <div className="flex flex-col items-start p-5">
-          <h2 className="text-xl font-medium mb-2">Expereince</h2>
+          <h2 className="text-xl font-medium mb-2">Experience</h2>
           <div className="flex flex-col gap-4">
             {/* Next.Nav */}
             <div>
@@ -28,7 +28,7 @@ export default function Home() {
                 <p>
                   I am a co-founder and software engineer for this product.
                   Next.Nav is an open-source product, supported by OS Labs. It
-                  is a route navigation and modificaiton VS Code extension for
+                  is a route navigation and modification VS Code extension for
                   Next.js applications using the new App Router.
                 </p>
                 <div className="w-full flex gap-5 underline my-2 text-blue">
@@ -61,7 +61,7 @@ export default function Home() {
                   and then rate their responses, requiring deep code
                   understanding and testing. This is a contract role.
                   DataAnnotation has this position listed as &quot;Frontend
-                  Developer&quot;. Langauges used: JavaScript, TypeScript,
+                  Developer&quot;. Languages used: JavaScript, TypeScript,
                   Python, Java.
                 </p>
                 <div className="w-full flex gap-5 underline my-2 text-blue">
@@ -86,9 +86,7 @@ export default function Home() {
       {/* Featured Blog Posts Section*/}
       <section className="border-b border-darkgray">
         <div className="flex flex-col items-start p-5">
-          <h2 className="text-xl font-medium mb-2">
-            I also have a blog
-          </h2>
+          <h2 className="text-xl font-medium mb-2">I also have a blog</h2>
           <div>
             <div>
               <h3>Blog post example</h3>
@@ -134,7 +132,7 @@ export default function Home() {
             Avatar: The Last Airbender is my favorite show. Regarding manga, so
             far I have read Monster by Naoki Urasawa, Berserk by Kentaro Miura,
             and I am now reading Vagaond by Takehiko Inoue. I had my own
-            expereince with story writing when I wrote my book{" "}
+            experience with story writing when I wrote my book{" "}
             <em>The Cards That Are Dealt</em>.
           </p>
           <br />

@@ -1,7 +1,8 @@
 import EmailButton from "./Email";
 import Link from "next/link";
 
-export default function SubHero() {
+//Creates brief introduction with CTA
+export default function SubHero():JSX.Element {
   return (
     <section>
       <div className="flex flex-col px-16 sm:px-48 min-h-[40dvh] items-start gap-5">

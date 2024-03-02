@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
-  const pathname = usePathname();
+/* CSR Component. Create a nav bar that underlines the current page. */
+export default function Navbar():JSX.Element {
+  const pathname = usePathname(); //returns the current route. Must be CSR
 
-  function isHome() {
+  //home page is just a / so must check that the route does not indicate other pages
+  function isHome():boolean {
     if (pathname.includes("blog") || pathname.includes("work")) {
       return false;
     }

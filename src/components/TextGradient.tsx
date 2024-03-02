@@ -4,6 +4,10 @@ type props = {
   text?: string;
   underline?: boolean;
 };
+
+//NOT UP TO DATE
+//creates a text gradient
+//will update styles and add animation
 export default function TextGradient({
   children,
   styles = "",
