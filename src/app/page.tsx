@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 
 /** This component wraps all the other sections of the home page, stored in the components folder **/
 /** This component will shrink as other sections are divided into their own components **/
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <div>
       <Hero />

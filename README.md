@@ -5,6 +5,7 @@ This is my software engineer portfolio and blog. It is very much still in progre
 - **Framework**: Next.js
 - **Styling**: Tailwindcss
 - **Deployment**: Vercel
+- **Animation**: Framer Motion
 
 ## Pages
 
@@ -16,7 +17,7 @@ Note that all of the current blog posts are nonsense for testing. Eventually, th
 
 ## Next steps
 
-- Add fade in animations.
+- Find a smoother way to display sliding skills list
 - Create animated text gradient.
 - Finish breaking down the home page into smaller components and adding styling
 - Style blog page
@@ -24,8 +25,7 @@ Note that all of the current blog posts are nonsense for testing. Eventually, th
 - Add content to work page
 - Style work page
 - Add interactive on hover and onclick styling
-- Find a smoother way to display sliding skills list
-- Add 3D objects to home page for intrigue
+- Potentially add background 3D objects for intrigue
 
 ## License
 
