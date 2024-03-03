@@ -7,7 +7,7 @@ import { FadeIn } from "./FadeIn";
 export default function Hero() {
   return (
     <section className="relative pb-32 min-h-dvh flex flex-col justify-center">
-      <div className="bg-gradient-radial rounded-full from-lgreen/30 via-transparent to-transparent w-[150%] h-[150%] absolute -top-[55dvh] -left-[90dvw] -z-100"></div>
+      <div className="bg-gradient-radial rounded-full from-lgreen/30 via-transparent to-transparent w-[150%] h-[150%] absolute -top-[55dvh] -left-[90dvw] pointer-events-none -z-100"></div>
       <div className="bg-gradient-radial rounded-full from-lblue/40 via-transparent to-transparent w-[150%] h-[150%] absolute -bottom-[50dvh] -right-[80dvw] pointer-events-none -z-100"></div>
       <FadeIn>
         <div className="flex flex-col items-center justify-center">
