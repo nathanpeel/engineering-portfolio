@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SlideIn } from "./SlideIn";
+import SlideIn from "./SlideIn";
 
 /* CSR Component. Create a nav bar that underlines the current page. */
 export default function Navbar(): JSX.Element {

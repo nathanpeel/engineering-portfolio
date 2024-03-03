@@ -5,7 +5,7 @@ type props = {
   children: React.ReactNode
 }
 
-export function SlideIn({children}: props) {
+export default function SlideIn({children}: props) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -200}}
