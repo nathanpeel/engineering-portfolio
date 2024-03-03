@@ -47,7 +47,7 @@ export default function ParallaxText({ children, baseVelocity = 10 }: props): JS
   });
 
   return (
-    <div className="overflow-hidden m-0 flex flex-nowrap whitespace-nowrap">
+    <div className="m-0 flex flex-nowrap whitespace-nowrap">
       <motion.div
         className="m-0 flex sm:gap-14 gap-8 flex-nowrap whitespace-nowrap"
         style={{ x }}>

@@ -17,7 +17,6 @@ Note that all of the current blog posts are nonsense for testing. Eventually, th
 
 ## Next steps
 
-- Find a smoother way to display sliding skills list
 - Create animated text gradient.
 - Finish breaking down the home page into smaller components and adding styling
 - Style blog page
