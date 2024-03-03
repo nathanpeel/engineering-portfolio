@@ -55,6 +55,10 @@ export default function ParallaxText({ children, baseVelocity = 10 }: props): JS
         <span>{children}</span>
         <span>{children}</span>
         <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
       </motion.div>
     </div>
   );

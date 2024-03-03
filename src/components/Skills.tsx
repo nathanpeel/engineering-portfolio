@@ -27,9 +27,9 @@ export default function SkillsList(): JSX.Element {
   /** This function gets the baseVelocity of the line based on the index and ensures that both lines go the same speed **/
   function getBaseVelocity(index: number): number {
     const lineOneLength = lineOne.toString().length;
-    let top = 2;
+    let top = 1.2;
     const lineTwoLength = lineTwo.toString().length;
-    let bottom = 2;
+    let bottom = 1.2;
     if (Math.abs(lineOneLength - lineTwoLength) > 3) {
       if (lineOneLength > lineTwoLength) {
         bottom = bottom * (lineOneLength / lineTwoLength);
@@ -45,11 +45,12 @@ export default function SkillsList(): JSX.Element {
     <section
       className="min-h-[50dvh] bg-lgreen text-white flex flex-col justify-center sm:text-6xl text-4xl font-semibold"
       id="container">
-      <div id="list-wrapper" className="flex flex-col sm:gap-10 gap-4">
+      <div className="flex flex-col justify-center sm:gap-10 gap-4 relative">
         {lineArray.map((line, index) => {
-
           return (
-            <ParallaxText baseVelocity={getBaseVelocity(index)} key={crypto.randomUUID()}>
+            <ParallaxText
+              baseVelocity={getBaseVelocity(index)}
+              key={crypto.randomUUID()}>
               <div className="flex sm:gap-14 gap-8" key={crypto.randomUUID()}>
                 {line.map((el) => {
                   return (
@@ -76,6 +77,16 @@ export default function SkillsList(): JSX.Element {
             </ParallaxText>
           );
         })}
+        <div className="absolute bg-gradient-to-r from-lgreen -left-1 to-transparent w-[15vw] h-[140%]"></div>
+        <div className="absolute -left-1 w-[15vw] h-[140%] flex">
+          <div className="bg-lgreen to-transparent w-[1vw] h-full"></div>
+          <div className="bg-gradient-to-r from-lgreen to-transparent w-[15vw] h-full"></div>
+        </div>
+
+        <div className="absolute -right-1 w-[15vw] h-[140%] flex">
+          <div className="bg-gradient-to-l from-lgreen to-transparent w-[15vw] h-full"></div>
+          <div className="bg-lgreen to-transparent w-[1vw] h-full"></div>
+        </div>
       </div>
     </section>
   );
