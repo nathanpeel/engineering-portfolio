@@ -15,10 +15,11 @@ export default function TextGradient({
   underline,
 }: props) {
   return (
-    <span className={underline ? "underline decoration-blue decoration-1" : ""}>
+    <span
+      className={underline ? "underline decoration-lblue decoration-1" : ""}>
       <span
         className={
-          "bg-clip-text text-transparent bg-gradient-to-r from-green to-blue " +
+          "gradient-text animate-gradient text-transparent " +
           styles
         }>
         {children || text}

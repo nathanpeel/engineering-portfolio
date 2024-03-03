@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FadeIn } from "./FadeIn";
+import FadeIn from "./FadeIn";
+import TextGradient from "./TextGradient";
 
 // Fairly simple Hero page with name and socials.
 //I would like to add some sort of element of interest later. Maybe 3D objects
@@ -11,9 +12,9 @@ export default function Hero() {
       <div className="bg-gradient-radial rounded-full from-lblue/40 via-transparent to-transparent w-[150%] h-[150%] absolute -bottom-[50dvh] -right-[80dvw] pointer-events-none -z-100"></div>
       <FadeIn>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="bg-gradient-to-b from-lblue to-dblue inline-block text-transparent bg-clip-text md:text-8xl sm:text-7xl text-5xl font-semibold cursor-default">
+          <TextGradient styles="md:text-8xl sm:text-7xl text-5xl font-bold">
             Nathan Peel
-          </h1>
+          </TextGradient>
           <h2 className="text-lgreen md:text-5xl sm:text-4xl text-2xl font-semibold mb-6 cursor-default">
             Software Engineer
           </h2>

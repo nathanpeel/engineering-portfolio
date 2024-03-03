@@ -1,6 +1,6 @@
 import EmailButton from "./Email";
 import Link from "next/link";
-import { FadeIn } from "./FadeIn";
+import FadeIn from "./FadeIn";
 
 //Creates brief introduction with CTA
 export default function SubHero(): JSX.Element {

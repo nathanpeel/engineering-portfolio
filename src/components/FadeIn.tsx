@@ -5,7 +5,7 @@ type props = {
   children: React.ReactNode
 }
 
-export function FadeIn({children}: props) {
+export default function FadeIn({children}: props) {
   return (
     <motion.div
       initial={{ opacity: 0}}
