@@ -14,7 +14,7 @@ export default function AboutMe():JSX.Element {
       </SlideIn>
       <div className="flex md:flex-row flex-col gap-10 md:items-start items-center">
         <FadeIn>
-          <div className="relative lg:h-[400px] md:h-[300px] h-[300px] md:basis-[1300px] sm:w-1/2 w-[250px] 3xl:basis-[900px]">
+          <div className="relative 3xl:w-[350px] lg:h-[400px] lg:w-[300px] md:h-[300px] md:w-[200px] h-[300px] w-[250px]">
             <Image
               className="rounded-xl object-cover"
               src="/headshot.png"
@@ -24,7 +24,7 @@ export default function AboutMe():JSX.Element {
             />
           </div>
         </FadeIn>
-        <FadeIn>
+        <FadeIn delay={0.3}>
           <div className="flex flex-col lg:text-lg text-base gap-5">
             <p>
               My name is Nathan, and I am a software engineer from San Diego.
@@ -44,9 +44,9 @@ export default function AboutMe():JSX.Element {
               around me.{" "}
             </p>
             <p>
-              Some fun facts about me: Avatar: The Last Airbender is my favorite
+              Some fun facts about me: <em>Avatar: The Last Airbender</em> is my favorite
               show, my favorite food is butter chicken, I play violin, and I
-              wrote a novel called The Cards That Are Dealt.
+              wrote a novel called <em>The Cards That Are Dealt</em>.
             </p>
           </div>
         </FadeIn>
