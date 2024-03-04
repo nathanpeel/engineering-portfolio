@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nathan Peel",
+  title: "Nathan Peel - Software Engineer",
   description: "An engineer/developer portfolio and blog",
 };
 
