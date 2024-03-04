@@ -2,9 +2,10 @@ import SlideIn from "./SlideIn";
 import FadeIn from "./FadeIn";
 import Link from "next/link";
 
+//Creates a projects page
 export default function Projects(): JSX.Element {
   return (
-    <section className="flex flex-col px-10 lg:px-40 2xl:px-72 pb-20 items-end">
+    <section className="flex flex-col px-10 lg:px-40 2xl:px-72 pb-20 items-end my-20">
       <SlideIn>
         <div className="flex flex-col sm:w-72 w-40 items-center sm:gap-2 gap-1 mb-20">
           <h2 className="sm:text-6xl text-3xl font-semibold">Projects</h2>

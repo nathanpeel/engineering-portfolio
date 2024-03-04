@@ -17,7 +17,6 @@ Note that all of the current blog posts are nonsense for testing. Eventually, th
 
 ## Next steps
 
-- Finish breaking down the home page into smaller components and adding styling
 - Style blog page
 - Style dynamic blog post page
 - Add content to work page

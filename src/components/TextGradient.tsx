@@ -5,9 +5,7 @@ type props = {
   underline?: boolean;
 };
 
-//NOT UP TO DATE
-//creates a text gradient
-//will update styles and add animation
+//creates a text gradient with an animation
 export default function TextGradient({
   children,
   styles = "",

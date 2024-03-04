@@ -19,6 +19,8 @@ export default function Footer():JSX.Element {
       <Link target="_blank" className="underline" href="https://vercel.com/">
         Vercel
       </Link>.
+      <br />
+      All rights for design and content reserved.
     </footer>
   );
 }

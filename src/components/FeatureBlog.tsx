@@ -3,6 +3,7 @@ import FadeIn from "./FadeIn";
 import Link from "next/link";
 import TextGradient from "./TextGradient";
 
+//Creates a section featuring three blog posts
 export default function FeatureBlog() {
   return (
     <section
