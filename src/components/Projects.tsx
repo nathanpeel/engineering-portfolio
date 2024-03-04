@@ -1,6 +1,7 @@
 import SlideIn from "./SlideIn";
 import FadeIn from "./FadeIn";
 import Link from "next/link";
+import Image from "next/image";
 
 //Creates a projects page
 export default function Projects(): JSX.Element {
@@ -28,13 +29,13 @@ export default function Projects(): JSX.Element {
               </div>
               <div className="flex flex-wrap gap-3 md:text-xl text-base font-medium mt-3 justify-end">
                 <Link
-                  href="https://github.com/oslabs-beta/Next-Nav"
+                  href="https://shelph.vercel.app/"
                   target="_blank"
                   className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3">
                   <p>Visit</p>
                 </Link>
                 <Link
-                  href="https://github.com/oslabs-beta/Next-Nav"
+                  href="https://github.com/nathanpeel/shelph"
                   target="_blank"
                   className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3">
                   GitHub
@@ -46,7 +47,15 @@ export default function Projects(): JSX.Element {
                 </Link>
               </div>
             </div>
-            <div className="md:w-[600px] bg-white md:h-[294px] sm:h-[300px] w-full h-[200px] rounded-lg text-dgreen text-center">No image yet</div>
+            <div className="relative md:w-[600px] md:h-[294px] sm:h-[300px] w-full h-[200px] rounded-lg border-dgreen border border-2">
+              <Image
+                className="rounded-lg object-cover object-top"
+                src="/shelphdemo.png"
+                alt="Picture from Shelph website"
+                fill
+                sizes=""
+              />
+            </div>
           </div>
         </FadeIn>
       </div>
