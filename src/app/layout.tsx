@@ -9,8 +9,28 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nathan Peel - Software Engineer",
+  metadataBase: new URL("https://nathanpeel.dev"),
+  title: "Nathan Peel",
   description: "An engineer/developer portfolio and blog",
+  openGraph: {
+    title: "Nathan Peel",
+    description: "An engineer/developer portfolio and blog",
+    url: "https://nathanpeel.dev",
+    siteName: "Nathan Peel",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
