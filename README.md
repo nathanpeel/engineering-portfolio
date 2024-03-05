@@ -13,11 +13,10 @@ There are three pages, the home page, the blog page, and the work page. The home
 
 ## Blog
 
-Note that all of the current blog posts are nonsense for testing. Eventually, the blog will focus on software engineering while incorporating philosophy. Stay tuned for updates.
+Note that all of the current blog posts are for testing/demonstration. Eventually, the blog will focus on software engineering while incorporating philosophy. Stay tuned for updates.
 
 ## Next steps
 
-- Add interactive on hover and onclick styling
 - Add blog post like, view count, and comment feature
 - Write awesome blog posts
 

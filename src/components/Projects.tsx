@@ -31,18 +31,18 @@ export default function Projects(): JSX.Element {
                 <Link
                   href="https://shelph.vercel.app/"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3">
+                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Visit</p>
                 </Link>
                 <Link
                   href="https://github.com/nathanpeel/shelph"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3">
+                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   GitHub
                 </Link>
                 <Link
                   href="/blog/shelph"
-                  className="rounded-full bg-white text-lgreen py-2 text-nowrap flex justify-center grow basis-1/3">
+                  className="rounded-full bg-white text-lgreen py-2 text-nowrap flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Read More</p>
                 </Link>
               </div>

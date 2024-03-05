@@ -22,7 +22,7 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/nathaniel-peel/"
               target="_blank"
-              className="relative w-10 h-10">
+              className="relative w-10 h-10 hover:scale-125 transition-all ease-linear">
               <Image
                 className="object-fill absolute"
                 src="/linkedin-logo.svg"
@@ -34,7 +34,7 @@ export default function Hero() {
             <Link
               href="https://github.com/nathanpeel"
               target="_blank"
-              className="w-10 h-10 relative">
+              className="w-10 h-10 relative hover:scale-125 transition-all ease-linear">
               <Image
                 className="object-fill absolute"
                 src="/github-logo.svg"

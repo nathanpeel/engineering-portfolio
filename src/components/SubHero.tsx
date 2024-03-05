@@ -13,11 +13,11 @@ export default function SubHero(): JSX.Element {
             optimist, and a citizen of the world. I am passionate about
             contributing to determined teams that solve problems to help people
             and the Earth. I am a co-founder and engineer for{" "}
-            <Link href="https://www.next-nav.com/" className="underline" target="_blank">
+            <Link href="https://www.next-nav.com/" className="underline hover:font-bold transition-all ease-linear" target="_blank">
               Next.Nav
             </Link>
           </p>
-          <EmailButton styles="rounded-full bg-lgreen text-white sm:text-3xl text-xl py-2 px-5 font-medium">
+          <EmailButton styles="rounded-full bg-lgreen text-white sm:text-3xl text-xl py-2 px-5 font-medium hover:shadow-xl transition-all ease-linear">
             Let&apos;s Talk
           </EmailButton>
         </div>

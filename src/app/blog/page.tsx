@@ -39,10 +39,10 @@ export default function Blog(): JSX.Element {
                 <FadeIn key={crypto.randomUUID()}>
                   <Link
                     href={"/blog/" + metadata.route}
-                    className="border-b-2 border-lgreen flex flex-col gap-2 py-2 focus:outline-none"
+                    className="border-b-2 border-lgreen flex flex-col gap-2 py-2 focus:outline-none hover:shadow-2xl hover:scale-105 transition-all ease-linear rounded-sm px-2"
                     id={metadata.route}>
                     <div className="flex flex-col sm:flex-row sm:gap-10 sm:items-center gap-2">
-                      <h2 className="text-2xl font-medium text-nowrap">
+                      <h2 className="text-2xl font-medium">
                         {metadata.title}
                       </h2>
                       <p>{formatDate(metadata.date)}</p>

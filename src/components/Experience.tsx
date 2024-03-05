@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 //Job experience section
-export default function Experience():JSX.Element {
+export default function Experience(): JSX.Element {
   return (
     <section className="flex flex-col px-16 lg:px-40 2xl:px-72 pb-20">
       <SlideIn>
@@ -41,25 +41,25 @@ export default function Experience():JSX.Element {
                 <Link
                   href="https://www.next-nav.com/"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Website</p>
                 </Link>
                 <Link
                   href="https://github.com/oslabs-beta/Next-Nav"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   GitHub
                 </Link>
                 <Link
                   href="https://marketplace.visualstudio.com/items?itemName=NextNav.NextNav"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Download</p>
                 </Link>
                 <Link
                   href="https://medium.com/@nathanjames719/next-nav-the-solution-to-confusing-file-based-routing-in-next-js-3c6db2346a05"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 text-nowrap flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 text-nowrap flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Read More</p>
                 </Link>
               </div>
@@ -93,12 +93,12 @@ export default function Experience():JSX.Element {
                 <Link
                   href="https://www.dataannotation.tech/"
                   target="_blank"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Website</p>
                 </Link>
                 <Link
                   href="/blog/dataannotation"
-                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
+                  className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   Read More
                 </Link>
               </div>

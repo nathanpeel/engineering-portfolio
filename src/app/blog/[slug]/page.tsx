@@ -32,7 +32,7 @@ export default function post({
     <div className="min-h-dvh relative">
       <main className="flex flex-col items-center text-dgreen px-5 pt-10">
         <div className="max-w-[700px] w-full flex items-start -mt-7">
-          <Link href={findInList ? `/blog#${slug}` : "/blog"} className="">
+          <Link href={findInList ? `/blog#${slug}` : "/blog"} className="hover:font-semibold transition-all ease-linear">
             {"<< Back to posts"}
           </Link>
         </div>

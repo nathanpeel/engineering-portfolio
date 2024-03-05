@@ -22,7 +22,9 @@ export default function Navbar(): JSX.Element {
         <Link
           href="/"
           className={
-            isHome() ? "underline opacity-60 transition-all ease-in" : ""
+            isHome()
+              ? "underline opacity-60 transition-all ease-in"
+              : "hover:scale-110 transition-all ease-linear"
           }>
           Home
         </Link>
@@ -31,15 +33,19 @@ export default function Navbar(): JSX.Element {
           className={
             pathname.includes("blog")
               ? "underline opacity-60 transition-all ease-in"
-              : ""
+              : "hover:scale-110 transition-all ease-linear"
           }>
           Blog
         </Link>
         <Link
-          href="/#contact">
+          href="/#contact"
+          className="hover:scale-110 transition-all ease-linear">
           Contact
         </Link>
-        <Link href="/nathan-peel-resume.pdf" target="_blank">
+        <Link
+          href="/nathan-peel-resume.pdf"
+          target="_blank"
+          className="hover:scale-110 transition-all ease-linear">
           Resume
         </Link>
       </header>

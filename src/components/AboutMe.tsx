@@ -59,7 +59,7 @@ export default function AboutMe(): JSX.Element {
                 <p>peeljnathan@gmail.com</p>
                 <EmailButton
                   showText={false}
-                  styles="active:scale-150 transition-all ease-out flex flex-col text-xs justify-center items-center gap-1 opacity-30 active:opacity-100 hover:opacity-100">
+                  styles="active:scale-110 transition-all ease-out flex flex-col text-xs justify-center items-center gap-1 opacity-30 active:opacity-100 hover:opacity-100">
                   <img src="/copyicon.svg" alt="copy icon" />
                   <p>copy</p>
                 </EmailButton>

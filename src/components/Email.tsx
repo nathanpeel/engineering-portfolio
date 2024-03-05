@@ -27,7 +27,7 @@ export default function EmailButton({
   };
 
   return (
-    <div className="flex flex-col items-center relative">
+    <div className="flex flex-col items-center relative hover:scale-105 transition-all ease-linear">
       <button onClick={handleClick} className={styles}>
         {children || text}
       </button>
