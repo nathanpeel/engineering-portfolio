@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Lora } from "next/font/google";
+import { redirect } from "next/navigation";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -26,7 +27,18 @@ export default function post({
     slug = slug.slice(0, -4); // so that the blog can be found properly
     findInList = false;
   }
-  const { content, data } = getBlogPost(slug + ".md");
+
+  //Error checking
+  const blogPost = getBlogPost(slug + ".md");
+  let content;
+  let data;
+  if (blogPost) {
+    const { content: dContent, data: dData } = blogPost;
+    content = dContent;
+    data = dData;
+  } else {
+    redirect("/error");
+  }
 
   return (
     <div className="min-h-dvh relative">

@@ -10,9 +10,13 @@ export function getMarkdownFileNames():string[] {
 }
 
 //returns the text from a specific file within the content directory
-function extractText(fileName: string):string {
+function extractText(fileName: string):string | false {
   const absoluteFilePath = path.join(process.cwd(), "./content/" + fileName);
-  return fs.readFileSync(absoluteFilePath, 'utf-8');
+  try {
+    return fs.readFileSync(absoluteFilePath, 'utf-8');
+  } catch (error) {
+    return false;
+  }
 }
 
 //turns the markdown strings into a readable object including metadata.
@@ -43,8 +47,14 @@ function getMarkdownData(markdown: string): blogPostType {
 }
 
 /** function that combines the extractText and getMarkdownData functions into one for use in components **/
-export function getBlogPost(fileName: string):blogPostType {
-  return getMarkdownData(extractText(fileName));
+export function getBlogPost(fileName: string): blogPostType | false {
+  const text = extractText(fileName);
+  if (typeof text === 'string') {
+    
+    return getMarkdownData(text);
+  } else {
+    return false;
+  }
 }
 
 //Formats a data string in teh format of YYYY-MM-DD to Month DD, YYYY format.
@@ -58,7 +68,10 @@ export function formatDate(dateString: string):string {
 export function getSortedBlogPosts(): blogPostType[] {
   const blogPostArray: blogPostType[] = []
   getMarkdownFileNames().map((filename) => {
-    blogPostArray.push(getBlogPost(filename));
+    const post = getBlogPost(filename);
+    if (post) {
+      blogPostArray.push(post);
+    }
   });
   blogPostArray.sort((a, b) => {
     const dateA: Date = new Date(a.data.date);
