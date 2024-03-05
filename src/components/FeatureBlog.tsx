@@ -57,9 +57,12 @@ export default function FeatureBlog({
         </div>
       </SlideIn>
       <div className="flex gap-10 lg:flex-row flex-col justify-items-stretch items-stretch">
-        {featured.map((post) => {
+        {featured.map((post, index) => {
+          const delay = 0.2 + (index / 10)
+
           return (
             <FadeIn
+              delay={delay}
               key={crypto.randomUUID()}
               styles="w-full shadow-xl rounded-2xl">
               <div
