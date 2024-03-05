@@ -3,7 +3,7 @@ title: 'Test Blog 2'
 route: 'testblog2'
 date: '2024-02-28'
 author: 'Nathan Peel'
-summary: 'random text'
+summary: 'A blog that shows the way to test a blog website'
 tags:
  - random
 ---
