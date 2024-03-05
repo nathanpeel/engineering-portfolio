@@ -1,21 +1,21 @@
 import ParallaxText from "./ParallaxText";
 
 const skillsArray: string[] = [
+  "CSS",
+  "Express",
+  "HTML",
+  "Java",
+  "JavaScript",
+  "MongoDB",
   "React",
   "Next.js",
-  "Redux/RTK",
+  "Node",
+  "PostgreSQL",
+  "Python",
   "React Native",
-  "HTML",
-  "CSS",
+  "Redux/RTK",
   "Tailwindcss",
   "TypeScript",
-  "JavaScript",
-  "Python",
-  "Java",
-  "Node",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
 ];
 
 /* Utilizes the .top and .bottom classes to create two lines of oppositely sliding lists of skills. There are two maps, one for each collection of skills and a nested map for each skill inside the list.  */

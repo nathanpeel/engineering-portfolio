@@ -41,13 +41,13 @@ export default function Projects(): JSX.Element {
                   GitHub
                 </Link>
                 <Link
-                  href="/work"
+                  href="/blog/shelph"
                   className="rounded-full bg-white text-lgreen py-2 text-nowrap flex justify-center grow basis-1/3">
                   <p>Read More</p>
                 </Link>
               </div>
             </div>
-            <div className="relative md:w-[600px] md:h-[294px] sm:h-[300px] w-full h-[200px] rounded-lg border-dgreen border border-2">
+            <div className="relative lg:w-[600px] lg:h-[350px] md:w-[700px] md:h-[500px] sm:h-[500px] w-full h-[300px] rounded-lg border-dgreen border-2">
               <Image
                 className="rounded-lg object-cover object-top"
                 src="/shelphdemo.png"

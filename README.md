@@ -17,12 +17,9 @@ Note that all of the current blog posts are nonsense for testing. Eventually, th
 
 ## Next steps
 
-- Style blog page
-- Style dynamic blog post page
-- Add content to work page
-- Style work page
 - Add interactive on hover and onclick styling
-- Potentially add background 3D objects for intrigue
+- Add blog post like, view count, and comment feature
+- Write awesome blog posts
 
 ## License
 

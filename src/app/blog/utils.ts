@@ -53,3 +53,18 @@ export function formatDate(dateString: string):string {
   const options: DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   return date.toLocaleDateString('en-US', options);
 }
+
+//return an array of all the blog posts in object format sorted from newest to oldest
+export function getSortedBlogPosts(): blogPostType[] {
+  const blogPostArray: blogPostType[] = []
+  getMarkdownFileNames().map((filename) => {
+    blogPostArray.push(getBlogPost(filename));
+  });
+  blogPostArray.sort((a, b) => {
+    const dateA: Date = new Date(a.data.date);
+    const dateB: Date = new Date(b.data.date);
+
+    return dateB.getTime() - dateA.getTime();
+  });
+  return blogPostArray;
+}

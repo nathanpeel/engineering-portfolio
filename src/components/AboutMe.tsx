@@ -1,9 +1,11 @@
 import SlideIn from "./SlideIn";
 import FadeIn from "./FadeIn";
 import Image from "next/image";
+import EmailButton from "./Email";
+import TextGradient from "./TextGradient";
 
 //Creates an about me section with a picture
-export default function AboutMe():JSX.Element {
+export default function AboutMe(): JSX.Element {
   return (
     <section className="flex flex-col items-center py-20 2xl:px-[10dvw] 3xl:px-[20dvw] sm:px-20 px-10 ">
       <SlideIn>
@@ -30,12 +32,13 @@ export default function AboutMe():JSX.Element {
               My name is Nathan, and I am a software engineer from San Diego.
             </p>
             <p>
-              I believe that technology and software will continue to help push
-              humanity forward, and I am passionate about helping humanity in
-              this way. I am particularly interested in software that helps
-              fight climate change or supports ecosystems. However, I believe
-              that many different kinds of software can have a positive impact,
-              and I am ready to contribute to where I am called.
+              I&apos;m passionate about harnessing the potential of technology
+              and software to drive constructive change in our world. I have a
+              particular interest in solutions within the realms of social
+              impact, education, health, and green tech. However, I also
+              recognize the potential for creating meaningful change across
+              various sectors and am eager to contribute my skills wherever
+              they&apos;re needed.
             </p>
             <p>
               Outside of engineering, I enjoy hiking, philosophy, meditation,
@@ -44,10 +47,24 @@ export default function AboutMe():JSX.Element {
               around me.{" "}
             </p>
             <p>
-              Some fun facts about me: <em>Avatar: The Last Airbender</em> is my favorite
-              show, my favorite food is butter chicken, I play violin, and I
-              wrote a novel called <em>The Cards That Are Dealt</em>.
+              Some fun facts about me: <em>Avatar: The Last Airbender</em> is my
+              favorite show, my favorite food is butter chicken, I play violin,
+              and I wrote a novel called <em>The Cards That Are Dealt</em>.
             </p>
+            <div className="flex sm:flex-row flex-col sm:items-center sm:gap-2" id={"contact"}>
+              <TextGradient styles="font-bold sm:text-3xl text-2xl">
+                Contact:{" "}
+              </TextGradient>
+              <div className="flex items-center gap-2">
+                <p>peeljnathan@gmail.com</p>
+                <EmailButton
+                  showText={false}
+                  styles="active:scale-150 transition-all ease-out flex flex-col text-xs justify-center items-center gap-1 opacity-30 active:opacity-100 hover:opacity-100">
+                  <img src="/copyicon.svg" alt="copy icon" />
+                  <p>copy</p>
+                </EmailButton>
+              </div>
+            </div>
           </div>
         </FadeIn>
       </div>

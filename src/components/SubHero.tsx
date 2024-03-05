@@ -13,7 +13,7 @@ export default function SubHero(): JSX.Element {
             optimist, and a citizen of the world. I am passionate about
             contributing to determined teams that solve problems to help people
             and the Earth. I am a co-founder and engineer for{" "}
-            <Link href="https://www.next-nav.com/" className="underline">
+            <Link href="https://www.next-nav.com/" className="underline" target="_blank">
               Next.Nav
             </Link>
           </p>

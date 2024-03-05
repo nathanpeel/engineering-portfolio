@@ -51,13 +51,14 @@ export default function Experience():JSX.Element {
                   GitHub
                 </Link>
                 <Link
-                  href="https://github.com/oslabs-beta/Next-Nav"
+                  href="https://marketplace.visualstudio.com/items?itemName=NextNav.NextNav"
                   target="_blank"
                   className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
                   <p>Download</p>
                 </Link>
                 <Link
-                  href="/work"
+                  href="https://medium.com/@nathanjames719/next-nav-the-solution-to-confusing-file-based-routing-in-next-js-3c6db2346a05"
+                  target="_blank"
                   className="rounded-full bg-white text-lgreen px-8 py-2 text-nowrap flex justify-center grow">
                   <p>Read More</p>
                 </Link>
@@ -96,7 +97,7 @@ export default function Experience():JSX.Element {
                   <p>Website</p>
                 </Link>
                 <Link
-                  href="/work"
+                  href="/blog/dataannotation"
                   className="rounded-full bg-white text-lgreen px-8 py-2 flex justify-center grow">
                   Read More
                 </Link>

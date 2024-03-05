@@ -3,6 +3,33 @@ import FadeIn from "./FadeIn";
 import Link from "next/link";
 import TextGradient from "./TextGradient";
 
+type blogPost = {
+  title: string,
+  caption: string,
+  route: string
+}
+
+const featured: blogPost[] = [
+  {
+    title: "Engineering Project: Shelph",
+    caption:
+    "An overview of my reading/watch list management web app project called Shelph",
+    route: "shelph",
+  },
+  {
+    title: "Example Blog post",
+    caption:
+    "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
+    route: "example",
+  },
+  {
+    title: "Example Blog post",
+    caption:
+    "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
+    route: "example",
+  },
+  
+];
 type props = {
   dark?: boolean;
   header?: string;
@@ -23,68 +50,36 @@ export default function FeatureBlog({
 
   return (
     <section
-      className="flex flex-col sm:px-16 px-10 lg:px-32 2xl:px-72 pb-20 gap-10"
-      id="feature-blog">
+      className="flex flex-col sm:px-16 pb-20 px-10 3xl:px-72 gap-10">
       <SlideIn>
         <div className="flex flex-col sm:w-48 w-28 items-center sm:gap-2 gap-1 sm:mb-20">
           <h2 className="sm:text-6xl text-3xl font-semibold">{header}</h2>
-          <div className={`${underlineWidth} h-1 bg-${cardColor} rounded-full`}></div>
+          <div
+            className={`${underlineWidth} h-1 bg-${cardColor} rounded-full`}></div>
         </div>
       </SlideIn>
-      <div className="flex gap-10 lg:flex-row flex-col">
-        <FadeIn>
-          <div
-            className={`flex flex-col p-5 items-start bg-${cardColor} rounded-2xl text-${textColor} gap-3`}>
-            <h3 className="md:text-3xl text-xl font-semibold">
-              Blog Title: More Blog Title
-            </h3>
-            <p className="md:text-xl text-sm">
-              This is a blog description to get someone interested in the blog.
-              What is this blog post about? I am not sure, but we will find out.
-            </p>
-            {/* Change to Link element */}
-            <div
-              className={`bg-${textColor} rounded-full text-${cardColor} py-2 w-full text-center md:mt-20 mt-10 sm:text-lg text-sm font-medium`}>
-              Read
-            </div>
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.3}>
-          <div
-            className={`flex flex-col p-5 items-start bg-${cardColor} rounded-2xl text-${textColor} gap-3`}>
-            <h3 className="md:text-3xl text-xl font-semibold">
-              Blog Title: More Blog Title
-            </h3>
-            <p className="md:text-xl text-sm">
-              This is a blog description to get someone interested in the blog.
-              What is this blog post about? I am not sure, but we will find out.
-            </p>
-            {/* Change to Link element */}
-            <div
-              className={`bg-${textColor} rounded-full text-${cardColor} py-2 w-full text-center md:mt-20 mt-10 sm:text-lg text-sm font-medium`}>
-              Read
-            </div>
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.4}>
-          <div
-            className={`flex flex-col p-5 items-start bg-${cardColor} rounded-2xl text-${textColor} gap-3`}>
-            <h3 className="md:text-3xl text-xl font-semibold">
-              Blog Title: More Blog Title
-            </h3>
-            <p className="md:text-xl text-sm">
-              This is a blog description to get someone interested in the blog.
-              What is this blog post about? I am not sure, but we will find out.
-            </p>
-            {/* Change to Link element */}
-            <div
-              className={`bg-${textColor} rounded-full text-${cardColor} py-2 w-full text-center md:mt-20 mt-10 sm:text-lg text-sm font-medium`}>
-              Read
-            </div>
-          </div>
-        </FadeIn>
+      <div className="flex gap-10 lg:flex-row flex-col justify-items-stretch items-stretch">
+        {featured.map((post) => {
+          return (
+            <FadeIn key={crypto.randomUUID()} styles="w-full">
+              <div
+                className={`flex flex-col p-5 items-start bg-${cardColor} rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative`}>
+                <h3 className="md:text-3xl text-xl font-semibold">
+                  {post.title}
+                </h3>
+                <p className=" md:text-xl text-sm mb-32">{post.caption}</p>
+                {/* Change to Link element */}
+                <Link
+                  href={`/blog/${post.route}2890`}
+                  className={`bg-${textColor} rounded-full text-${cardColor} py-2 text-center md:mt-20 mt-10 sm:text-lg text-sm font-medium absolute bottom-5 right-4 left-4`}>
+                  Read
+                </Link>
+              </div>
+            </FadeIn>
+          );
+        })}
       </div>
-      <div className="flex sm:flex-row flex-col items-center justify-center sm:justify-start gap-3 sm:gap-20 self-center">
+      <div className="flex lg:flex-row flex-col items-center justify-center sm:justify-start gap-3 lg:gap-20 self-center lg:self-start">
         {showReadMore && (
           <Link
             href="/blog"
@@ -94,7 +89,7 @@ export default function FeatureBlog({
             <TextGradient>Read More</TextGradient>
           </Link>
         )}
-        <Link href="/#feature-blog" className="underline text-base">
+        <Link href="/blog" className="underline text-base">
           Subscribe to my email list 🎁
         </Link>
       </div>

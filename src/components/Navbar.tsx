@@ -36,13 +36,8 @@ export default function Navbar(): JSX.Element {
           Blog
         </Link>
         <Link
-          href="/work"
-          className={
-            pathname.includes("work")
-              ? "underline opacity-60 transition-all ease-in"
-              : ""
-          }>
-          Work
+          href="/#contact">
+          Contact
         </Link>
         <Link href="/nathan-peel-resume.pdf" target="_blank">
           Resume
