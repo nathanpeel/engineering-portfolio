@@ -29,7 +29,7 @@ export default function Experience(): JSX.Element {
               <h3 className="lg:text-3xl text-xl font-medium">
                 Software Engineer <br></br>Next.Nav
               </h3>
-              <p className="lg:text-2xl text-lg">June 2023 - Present</p>
+              <p className="lg:text-2xl text-lg">Jan 2023 - Present</p>
               <p className="lg:text-xl text-sm">
                 I am a co-founder and software engineer for this product,
                 supported by tech accelerator OS Labs. It is a route navigation
