@@ -28,12 +28,13 @@ export default function Projects(): JSX.Element {
                 <div className="bg-white/40 px-3 rounded-full">TypeScript</div>
               </div>
               <div className="flex flex-wrap gap-3 md:text-xl text-base font-medium mt-3 justify-end">
-                <Link
+                {/* Project not working currently */}
+                {/* <Link
                   href="https://shelph.vercel.app/"
                   target="_blank"
                   className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
                   <p>Visit</p>
-                </Link>
+                </Link> */}
                 <Link
                   href="https://github.com/nathanpeel/shelph"
                   target="_blank"
