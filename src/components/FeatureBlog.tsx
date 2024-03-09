@@ -66,7 +66,7 @@ export default function FeatureBlog({
               key={crypto.randomUUID()}
               styles="w-full shadow-xl rounded-2xl">
               <div
-                className={`flex flex-col p-5 items-start bg-${cardColor} rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative`}>
+                className={`flex flex-col p-5 items-start bg-${cardColor}  rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative`}>
                 <h3 className="md:text-3xl text-xl font-semibold">
                   {post.title}
                 </h3>

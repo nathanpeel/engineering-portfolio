@@ -42,12 +42,6 @@ export default function Navbar(): JSX.Element {
           className="hover:scale-110 transition-all ease-linear">
           Contact
         </Link>
-        <Link
-          href="/nathan-peel-resume.pdf"
-          target="_blank"
-          className="hover:scale-110 transition-all ease-linear">
-          Resume
-        </Link>
       </header>
     </SlideIn>
   );

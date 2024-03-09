@@ -65,6 +65,7 @@ export default function AboutMe(): JSX.Element {
                 </EmailButton>
               </div>
             </div>
+            <p>Please email me for my resume if you want it.</p>
           </div>
         </FadeIn>
       </div>
