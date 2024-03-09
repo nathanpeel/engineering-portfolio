@@ -27,7 +27,8 @@ export default function Experience(): JSX.Element {
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="lg:text-3xl text-xl font-medium">
-                Software Engineer <br></br>Next.Nav
+                Next.Nav
+                <br></br>Software Engineer
               </h3>
               <p className="lg:text-2xl text-lg">Jan 2023 - Present</p>
               <p className="lg:text-xl text-sm">
