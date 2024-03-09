@@ -44,21 +44,23 @@ export default function post({
     <div className="min-h-dvh relative">
       <main className="flex flex-col items-center text-dgreen px-5 pt-10">
         <div className="max-w-[700px] w-full flex items-start -mt-7">
-          <Link href={findInList ? `/blog#${slug}` : "/blog"} className="hover:font-semibold transition-all ease-linear">
-            {"<< Back to posts"}
+          <Link
+            href={findInList ? `/blog#${slug}` : "/blog"}
+            className="hover:font-semibold transition-all ease-linear">
+            {"< Back to posts"}
           </Link>
         </div>
-        {/* Metadata */}
 
-        <div className="flex flex-col items-center max-w-[700px] relative">
-          <h1 className=" text-4xl font-semibold text-center py-10">
+        {/* Metadata */}
+        <div className="flex flex-col max-w-[700px] w-full mt-14 gap-2">
+          <p className="text-sm">{formatDate(data.date)}</p>
+          <h1 className="sm:text-5xl text-4xl font-bold">
             {data.title}
           </h1>
-          <div className="flex gap-10 text-lg">
-            <p>{formatDate(data.date)}</p>
-            <p>by {data.author}</p>
+          <div className="flex gap-10 text-lg font-medium">
+            <p>{data.author}</p>
           </div>
-          <p className="self-start">{data.summary}</p>
+          <p className="text-base">{data.summary}</p>
         </div>
         <div>
           <div className="text-sm py-10 max-w-[700px]">
@@ -68,7 +70,7 @@ export default function post({
                 h1(props) {
                   const { node, ...rest } = props;
                   return (
-                    <h1 className="text-2xl my-7 font-semibold" {...rest}></h1>
+                    <h1 className="sm:text-3xl text-2xl my-7 font-semibold" {...rest}></h1>
                   );
                 },
                 h2(props) {
