@@ -29,10 +29,10 @@ export default function Projects(): JSX.Element {
               and MongoDB
             </p>
             <div className="flex items-center gap-5">
-              {/* <Link href="/">
+              {/* <Link href="/" target="_blank">
                 <MdRemoveRedEye className="w-12 h-12 hover:scale-110 hover:text-lblue transition-all ease-linear" />
               </Link> */}
-              <Link href="https://github.com/nathanpeel/shelph">
+              <Link href="https://github.com/nathanpeel/shelph" target="_blank">
                 <FaGithub className="w-10 h-10 hover:scale-110 hover:text-lblue transition-all ease-linear" />
               </Link>
               <Link
@@ -56,10 +56,10 @@ export default function Projects(): JSX.Element {
               discussing topics such as philosophy, literature, and history.
             </p>
             <div className="flex items-center gap-5">
-              {/* <Link href="/">
+              {/* <Link href="/" target="_blank">
                 <MdRemoveRedEye className="w-12 h-12 hover:scale-110 hover:text-lblue transition-all ease-linear" />
               </Link> */}
-              {/* <Link href="https://github.com/nathanpeel/">
+              {/* <Link href="https://github.com/nathanpeel/" target="_blank">
                 <FaGithub className="w-10 h-10 hover:scale-110 hover:text-lblue transition-all ease-linear" />
               </Link>
               <Link

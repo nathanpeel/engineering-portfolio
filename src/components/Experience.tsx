@@ -96,12 +96,8 @@ export default function Experience(): JSX.Element {
                   and Express.js.
                 </p>
                 <div className="flex flex-wrap sm:gap-6 gap-3 sm:text-xl text-lg font-medium mt-3 justify-start items-center">
-                  {/* <Link href="https://www.next-nav.com/" target="_blank">
-                    <MdLanguage className="sm:w-12 sm:h-12 w-9 h-9 hover:scale-110 hover:text-lblue transition-all ease-linear" />
-                  </Link> */}
                   <Link
-                    href="https://medium.com/@nathanjames719/next-nav-the-solution-to-confusing-file-based-routing-in-next-js-3c6db2346a05"
-                    target="_blank">
+                    href="/blog/tonystotalservice">
                     <p className="underline underline-offset-1 hover:scale-110 hover:text-lblue transition-all ease-linear">
                       Read More
                     </p>
