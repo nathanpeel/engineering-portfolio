@@ -4,6 +4,12 @@ import { blogPostType } from "./utils";
 import TextGradient from "@/components/TextGradient";
 import FeatureBlog from "@/components/FeatureBlog";
 import FadeIn from "@/components/FadeIn";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Read my thoughts on software engineering, computer science, the tech culture, and the philosophy to manage it all."
+}
 
 /* creates a list of all the blog posts in the content folder */
 export default function Blog(): JSX.Element {

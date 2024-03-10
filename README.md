@@ -17,8 +17,7 @@ Note that all of the current blog posts are for testing/demonstration. Eventuall
 
 ## Next steps
 
-- Create sitemap
-- Optimize SEO
+- Generate dynamic metadata and open graphs for blog posts
 - Add blog post view count
 - Write awesome blog posts
 
