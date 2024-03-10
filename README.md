@@ -19,7 +19,7 @@ Note that all of the current blog posts are for testing/demonstration. Eventuall
 
 - Create sitemap
 - Optimize SEO
-- Add blog post like, view count, and comment feature
+- Add blog post view count
 - Write awesome blog posts
 
 ## License

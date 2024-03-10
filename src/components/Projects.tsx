@@ -1,7 +1,8 @@
 import SlideIn from "./SlideIn";
 import FadeIn from "./FadeIn";
 import Link from "next/link";
-import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { MdRemoveRedEye } from "react-icons/md";
 
 //Creates a projects page
 export default function Projects(): JSX.Element {
@@ -13,49 +14,60 @@ export default function Projects(): JSX.Element {
           <div className="w-full h-1 bg-white rounded-full"></div>
         </div>
       </SlideIn>
-      <div>
+      {/* Change the grid cols to 2 when there is more than one project */}
+      <div className="grid md:grid-cols-2 md:gap-4 gap-10 place-content-end">
         <FadeIn>
-          <div className="flex lg:flex-row flex-col lg:items-center items-end justify-end mb-20 gap-6 text-right">
-            <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-end gap-2 hover:bg-white/10 rounded-xl transition-all ease-linear px-5 py-10">
+            <div className="flex items-center gap-2">
               <h3 className="text-4xl font-medium">Shelph</h3>
-              <p className="lg:text-2xl md:text-xl text-lg">
-                Full stack web application built with Next.js and MongoDB.{" "}
-                <br />A reading/watch list management app.
-              </p>
-              <div className="flex justify-end gap-4 text-sm flex-wrap">
-                <div className="bg-white/40 px-3 rounded-full">Next.js</div>
-                <div className="bg-white/40 px-3 rounded-full">MongoDB</div>
-                <div className="bg-white/40 px-3 rounded-full">TypeScript</div>
-              </div>
-              <div className="flex flex-wrap gap-3 md:text-xl text-base font-medium mt-3 justify-end">
-                {/* Project not working currently */}
-                {/* <Link
-                  href="https://shelph.vercel.app/"
-                  target="_blank"
-                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
-                  <p>Visit</p>
-                </Link> */}
-                <Link
-                  href="https://github.com/nathanpeel/shelph"
-                  target="_blank"
-                  className="rounded-full bg-white text-lgreen md:px-6 py-2 flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
-                  GitHub
-                </Link>
-                <Link
-                  href="/blog/shelph"
-                  className="rounded-full bg-white text-lgreen py-2 text-nowrap flex justify-center grow basis-1/3 hover:shadow-lg hover:-translate-y-1 hover:text-lblue transition-all ease-linear">
-                  <p>Read More</p>
-                </Link>
+              <div className="bg-white/20 rounded-full text-center w-14 h-14 flex flex-col justify-center text-4xl">
+                <p>📚</p>
               </div>
             </div>
-            <div className="relative lg:w-[600px] lg:h-[350px] md:w-[700px] md:h-[500px] sm:h-[500px] w-full h-[300px] rounded-lg border-dgreen border-2">
-              <Image
-                className="rounded-lg object-cover object-top"
-                src="/shelphdemo.png"
-                alt="Picture from Shelph website"
-                fill
-                sizes=""
-              />
+            <p className="text-sm text-right">
+              A reading/watch list management web application built with Next.js
+              and MongoDB
+            </p>
+            <div className="flex items-center gap-5">
+              {/* <Link href="/">
+                <MdRemoveRedEye className="w-12 h-12 hover:scale-110 hover:text-lblue transition-all ease-linear" />
+              </Link> */}
+              <Link href="https://github.com/nathanpeel/shelph">
+                <FaGithub className="w-10 h-10 hover:scale-110 hover:text-lblue transition-all ease-linear" />
+              </Link>
+              <Link
+                href="/blog/shelph"
+                className="text-lg font-medium hover:scale-110 hover:text-lblue transition-all ease-linear underline">
+                Read More
+              </Link>
+            </div>
+          </div>
+        </FadeIn>
+        <FadeIn>
+          <div className="flex flex-col items-end gap-2 hover:bg-white/10 rounded-xl transition-all ease-linear px-5 py-10">
+            <div className="flex items-center gap-2">
+              <h3 className="text-4xl font-medium">Wisposium</h3>
+              <div className="bg-white/20 rounded-full text-center w-14 h-14 flex flex-col justify-center text-4xl">
+                <p>🏛️</p>
+              </div>
+            </div>
+            <p className="text-sm text-right">
+              A forum and creator platform for learning, teaching, and
+              discussing topics such as philosophy, literature, and history.
+            </p>
+            <div className="flex items-center gap-5">
+              {/* <Link href="/">
+                <MdRemoveRedEye className="w-12 h-12 hover:scale-110 hover:text-lblue transition-all ease-linear" />
+              </Link> */}
+              {/* <Link href="https://github.com/nathanpeel/">
+                <FaGithub className="w-10 h-10 hover:scale-110 hover:text-lblue transition-all ease-linear" />
+              </Link>
+              <Link
+                href="/blog/"
+                className="text-lg font-medium hover:scale-110 hover:text-lblue transition-all ease-linear underline">
+                Read More
+              </Link> */}
+              <p className="text-lg font-medium">Coming Soon</p>
             </div>
           </div>
         </FadeIn>

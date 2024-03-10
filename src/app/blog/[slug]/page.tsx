@@ -105,7 +105,7 @@ export default function post({
                   const { node, ...rest } = props;
                   return (
                     <ol
-                      className="list-decimal list-inside text-base mt-2 mb-4"
+                      className="list-decimal list-inside text-base mt-2 mb-4 leading-loose"
                       {...rest}></ol>
                   );
                 },
@@ -113,7 +113,7 @@ export default function post({
                   const { node, ...rest } = props;
                   return (
                     <ul
-                      className="list-disc list-inside text-base mt-2 mb-4"
+                      className="list-disc list-inside text-base mt-2 mb-4 leading-loose"
                       {...rest}></ul>
                   );
                 },

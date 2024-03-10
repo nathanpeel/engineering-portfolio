@@ -3,6 +3,7 @@ import FadeIn from "./FadeIn";
 import Image from "next/image";
 import EmailButton from "./Email";
 import TextGradient from "./TextGradient";
+import { MdContentCopy } from "react-icons/md";
 
 //Creates an about me section with a picture
 export default function AboutMe(): JSX.Element {
@@ -60,7 +61,7 @@ export default function AboutMe(): JSX.Element {
                 <EmailButton
                   showText={false}
                   styles="active:scale-110 transition-all ease-out flex flex-col text-xs justify-center items-center gap-1 opacity-30 active:opacity-100 hover:opacity-100">
-                  <img src="/copyicon.svg" alt="copy icon" />
+                  <MdContentCopy className="w-5 h-5"/>
                   <p>copy</p>
                 </EmailButton>
               </div>

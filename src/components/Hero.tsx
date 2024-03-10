@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import FadeIn from "./FadeIn";
 import TextGradient from "./TextGradient";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Fairly simple Hero page with name and socials.
 //I would like to add some sort of element of interest later. Maybe 3D objects
@@ -22,26 +22,14 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/nathaniel-peel/"
               target="_blank"
-              className="relative w-10 h-10 hover:scale-125 transition-all ease-linear">
-              <Image
-                className="object-fill absolute"
-                src="/linkedin-logo.svg"
-                alt="LinkedIn Logo"
-                fill
-                sizes=""
-              />
+              className="hover:scale-125 transition-all ease-linear">
+              <FaLinkedin className="w-10 h-10"/>
             </Link>
             <Link
               href="https://github.com/nathanpeel"
               target="_blank"
-              className="w-10 h-10 relative hover:scale-125 transition-all ease-linear">
-              <Image
-                className="object-fill absolute"
-                src="/github-logo.svg"
-                alt="GitHub Logo"
-                fill
-                sizes=""
-              />
+              className="hover:scale-125 transition-all ease-linear">
+              <FaGithub className="w-10 h-10"/>
             </Link>
           </div>
         </div>

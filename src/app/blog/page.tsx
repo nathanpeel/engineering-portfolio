@@ -9,8 +9,8 @@ import FadeIn from "@/components/FadeIn";
 export default function Blog(): JSX.Element {
   return (
     <div>
-      <main className="sm:px-20 px-6">
-        <section className="flex flex-col items-center sm:my-44 my-20 gap-4 text-center md:px-20 ">
+      <main className="px-6">
+        <section className="flex flex-col items-center sm:my-44 my-20 gap-4 text-center md:px-20">
           <TextGradient styles="sm:text-6xl text-4xl font-bold">
             Welcome to My Blog
           </TextGradient>

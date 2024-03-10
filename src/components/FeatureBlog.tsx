@@ -2,11 +2,13 @@ import SlideIn from "./SlideIn";
 import FadeIn from "./FadeIn";
 import Link from "next/link";
 import TextGradient from "./TextGradient";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 type blogPost = {
   title: string;
   caption: string;
   route: string;
+  date: string;
 };
 
 const featured: blogPost[] = [
@@ -15,18 +17,21 @@ const featured: blogPost[] = [
     caption:
       "An overview of my reading/watch list management web app project called Shelph",
     route: "shelph",
+    date: "March 3, 2024",
   },
   {
     title: "Example Blog post",
     caption:
       "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
     route: "example",
+    date: "March 1, 2024",
   },
   {
     title: "Example Blog post",
     caption:
       "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
     route: "example",
+    date: "March 1, 2024",
   },
 ];
 type props = {
@@ -58,26 +63,30 @@ export default function FeatureBlog({
       </SlideIn>
       <div className="flex gap-10 lg:flex-row flex-col justify-items-stretch items-stretch">
         {featured.map((post, index) => {
-          const delay = 0.2 + (index / 10)
+          const delay = 0.2 + index / 10;
 
           return (
             <FadeIn
               delay={delay}
               key={crypto.randomUUID()}
               styles="w-full shadow-xl rounded-2xl">
-              <div
-                className={`flex flex-col p-5 items-start bg-${cardColor}  rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative`}>
-                <h3 className="md:text-3xl text-xl font-semibold">
-                  {post.title}
-                </h3>
-                <p className=" md:text-xl text-sm mb-32">{post.caption}</p>
-                {/* Change to Link element */}
-                <Link
-                  href={`/blog/${post.route}2890`}
-                  className={`bg-${textColor} rounded-full text-${cardColor} py-2 text-center md:mt-20 mt-10 sm:text-lg text-sm font-medium absolute bottom-5 right-4 left-4 hover:font-bold hover:-translate-y-1 hover:shadow-xl transition-all ease-linear`}>
-                  Read
-                </Link>
-              </div>
+              <Link href={`/blog/${post.route}2890`}>
+                <div
+                  className={`flex flex-col p-5 items-start bg-${cardColor}  rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative hover:scale-105 transition-all ease-linear hover:outline-lblue hover:outline-4 hover:outline hover:text-lblue hover:shadow-2xl`}>
+                  <p className={`sm:text-sm text-${textColor}`}>{post.date}</p>
+                  <h3
+                    className={`md:text-3xl text-xl font-semibold text-${textColor}`}>
+                    {post.title}
+                  </h3>
+                  <p className={`md:text-xl text-sm text-${textColor}`}>
+                    {post.caption}
+                  </p>
+                  <div className="flex gap-1 items-center underline mb-32">
+                    <p className="text-sm">Read</p>
+                    <MdOutlineArrowOutward />
+                  </div>
+                </div>
+              </Link>
             </FadeIn>
           );
         })}
@@ -92,7 +101,9 @@ export default function FeatureBlog({
             <TextGradient>Read More</TextGradient>
           </Link>
         )}
-        <Link href="/blog" className="underline text-base opacity-60 hover:opacity-100 transition-all ease-linear">
+        <Link
+          href="/blog"
+          className="underline text-base opacity-60 hover:opacity-100 transition-all ease-linear">
           Subscribe to my email list 🎁
         </Link>
       </div>
