@@ -20,20 +20,14 @@ const featured: blogPost[] = [
     date: "March 3, 2024",
   },
   {
-    title: "Example Blog post",
+    title: "How my dad taught me to be an engineer",
     caption:
-      "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
-    route: "example",
-    date: "March 1, 2024",
-  },
-  {
-    title: "Example Blog post",
-    caption:
-      "Eventually this will be a real and magnificent blog post you can read. It might even be the best blog post you ever read. Only time will tell.",
-    route: "example",
-    date: "March 1, 2024",
+      "Despite not being an engineer, my dad taught me many important skills that I believe are critical for being an engineer.",
+    route: "mydadtaughtengineering",
+    date: "March 12, 2024"
   },
 ];
+
 type props = {
   dark?: boolean;
   header?: string;
