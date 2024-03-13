@@ -57,14 +57,13 @@ export default function FeatureBlog({
       </SlideIn>
       <div className="flex gap-10 lg:flex-row flex-col justify-items-stretch items-stretch">
         {featured.map((post, index) => {
-          const delay = 0.2 + index / 10;
+          // const delay = 0.2 + index / 10;
 
           return (
-            <FadeIn
-              delay={delay}
-              key={crypto.randomUUID()}
-              styles="w-full shadow-xl rounded-2xl">
-              <Link href={`/blog/${post.route}2890`}>
+              <Link
+                key={crypto.randomUUID()}
+                href={`/blog/${post.route}2890`}
+                className="w-full shadow-xl rounded-2xl">
                 <div
                   className={`flex flex-col p-5 items-start bg-${cardColor}  rounded-2xl text-${textColor} gap-3 w-full h-[100%] relative hover:scale-105 transition-all ease-linear hover:outline-lblue hover:outline-4 hover:outline hover:text-lblue hover:shadow-2xl`}>
                   <p className={`sm:text-sm text-${textColor}`}>{post.date}</p>
@@ -81,7 +80,6 @@ export default function FeatureBlog({
                   </div>
                 </div>
               </Link>
-            </FadeIn>
           );
         })}
       </div>
