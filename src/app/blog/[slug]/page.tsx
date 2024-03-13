@@ -121,7 +121,7 @@ export default function post({
                   },
                   a(props) {
                     const { node, ...rest } = props;
-                    return <a className="text-lblue underline" {...rest}></a>;
+                    return <a className="text-lblue underline" target="_blank" {...rest}></a>;
                   },
                   //This allows for code blocks to have syntax highlighting
                   code(props) {
