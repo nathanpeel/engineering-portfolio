@@ -119,6 +119,10 @@ export default function post({
                         {...rest}></ul>
                     );
                   },
+                  a(props) {
+                    const { node, ...rest } = props;
+                    return <a className="text-lblue underline" {...rest}></a>;
+                  },
                   //This allows for code blocks to have syntax highlighting
                   code(props) {
                     const { children, className, node, ...rest } = props;
