@@ -4,6 +4,7 @@ import Image from "next/image";
 import EmailButton from "./Email";
 import TextGradient from "./TextGradient";
 import { MdContentCopy } from "react-icons/md";
+import Link from "next/link";
 
 //Creates an about me section with a picture
 export default function AboutMe(): JSX.Element {
@@ -50,9 +51,15 @@ export default function AboutMe(): JSX.Element {
             <p>
               Some fun facts about me: <em>Avatar: The Last Airbender</em> is my
               favorite show, my favorite food is butter chicken, I play violin,
-              and I wrote a novel called <em>The Cards That Are Dealt</em>.
+              and I wrote a novel called{" "}
+              <Link href="https://tctad.vercel.app/" className="underline hover:font-bold transition-all ease-linear" target="_blank">
+                <em>The Cards That Are Dealt</em>
+              </Link>
+              .
             </p>
-            <div className="flex sm:flex-row flex-col sm:items-center sm:gap-2" id={"contact"}>
+            <div
+              className="flex sm:flex-row flex-col sm:items-center sm:gap-2"
+              id={"contact"}>
               <TextGradient styles="font-bold sm:text-3xl text-2xl">
                 Contact:{" "}
               </TextGradient>
@@ -61,7 +68,7 @@ export default function AboutMe(): JSX.Element {
                 <EmailButton
                   showText={false}
                   styles="active:scale-110 transition-all ease-out flex flex-col text-xs justify-center items-center gap-1 opacity-30 active:opacity-100 hover:opacity-100">
-                  <MdContentCopy className="w-5 h-5"/>
+                  <MdContentCopy className="w-5 h-5" />
                   <p>copy</p>
                 </EmailButton>
               </div>
