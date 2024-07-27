@@ -6,11 +6,49 @@ import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Lora } from "next/font/google";
 import { redirect } from "next/navigation";
-import FadeIn from "@/components/FadeIn";
+import type { Metadata, ResolvingMetadata } from "next";
 
 const lora = Lora({
   subsets: ["latin"],
 });
+
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const { slug: route } = params;
+  //this determines if clicking the back button returns the user to the blog page or at the specific blog in the list of blogs. When false, it will just return to the blog page
+  let findInList = true;
+  let slug = route;
+  //this checks if the slug includes the code
+  if (slug.slice(-4) === "2890") {
+    slug = slug.slice(0, -4); // so that the blog can be found properly
+    findInList = false;
+  }
+
+  //Error checking
+  const blogPost = getBlogPost(slug + ".md");
+  let content;
+  let data;
+  if (blogPost) {
+    const { content: dContent, data: dData } = blogPost;
+    content = dContent;
+    data = dData;
+  } else {
+    redirect("/error");
+  }
+
+  return {
+    title: `${data.title} | Nathan Peel's Engineer Blog`,
+    description: data.summary,
+  };
+}
 
 /* Blog post page for dynamic route.
 The syntax highlighting theme for code blocks can be adjusted somewhat, but it is best to find a theme where the actual text/code is desirable. The background and border can be adjusted. */

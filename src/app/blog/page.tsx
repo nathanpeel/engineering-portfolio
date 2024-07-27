@@ -7,7 +7,7 @@ import FadeIn from "@/components/FadeIn";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Engineering & Tech Blog | Nathan Peel",
   description:
     "Read my thoughts on software engineering, computer science, the tech culture, and the philosophy to manage it all.",
 };

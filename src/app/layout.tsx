@@ -10,10 +10,10 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nathanpeel.dev"),
-  title: "Nathan Peel",
+  title: "Nathan Peel | Software Engineer",
   description: "An engineer/developer portfolio and blog",
   openGraph: {
-    title: "Nathan Peel",
+    title: "Nathan Peel | Software Engineer",
     description: "An engineer/developer portfolio and blog",
     url: "https://nathanpeel.dev",
     siteName: "Nathan Peel",
