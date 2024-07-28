@@ -5,6 +5,7 @@ import TextGradient from "@/components/TextGradient";
 import FeatureBlog from "@/components/FeatureBlog";
 import FadeIn from "@/components/FadeIn";
 import { Metadata } from "next";
+import ViewCounter from "@/components/ViewCounter";
 
 export const metadata: Metadata = {
   title: "Engineering & Tech Blog | Nathan Peel",
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
 
 /* creates a list of all the blog posts in the content folder */
 export default function Blog(): JSX.Element {
+
+  const sortedPosts = getSortedBlogPosts();
+
   return (
     <div>
       <main className="px-6">
@@ -21,6 +25,9 @@ export default function Blog(): JSX.Element {
           <section className="flex flex-col items-center sm:my-44 my-20 gap-4 text-center md:px-20">
             <TextGradient styles="sm:text-6xl text-4xl font-bold">
               Welcome to My Blog
+            </TextGradient>
+            <TextGradient styles="sm:text-3xl text-2xl font-semibold">
+              Tech & Reason
             </TextGradient>
             <p className="sm:text-base">
               Focussing on Software Engineering and Computer Science while
@@ -42,7 +49,7 @@ export default function Blog(): JSX.Element {
         <section className="flex flex-col items-center mb-20">
           <p className="text-4xl font-semibold mb-5">All Posts</p>
           <div className="flex flex-col gap-10 w-3/4">
-            {getSortedBlogPosts().map((postObject) => {
+            {sortedPosts.map((postObject) => {
               const metadata: blogPostType["data"] = postObject.data; //extract metadata
               return (
                 <Link
@@ -53,6 +60,7 @@ export default function Blog(): JSX.Element {
                   <div className="flex flex-col sm:flex-row sm:gap-10 sm:items-center gap-2">
                     <h2 className="text-2xl font-medium">{metadata.title}</h2>
                     <p>{formatDate(metadata.date)}</p>
+                    <ViewCounter route={metadata.route}/>
                     <p>
                       {metadata.author == "Nathan Peel" ? "" : metadata.author}
                     </p>

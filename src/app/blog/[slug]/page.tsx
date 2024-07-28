@@ -1,12 +1,14 @@
-import { getBlogPost } from "../utils";
+import { getBlogPost, formatDate } from "../utils";
 import Markdown from "react-markdown";
-import { formatDate } from "../utils";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Link from "next/link";
 import { Lora } from "next/font/google";
 import { redirect } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from "next";
+import ViewCounter from "@/components/ViewCounter";
+import { increment } from "../actions";
+import { cache } from "react";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -16,6 +18,7 @@ type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
 
 export async function generateMetadata(
   { params, searchParams }: Props,
@@ -52,11 +55,7 @@ export async function generateMetadata(
 
 /* Blog post page for dynamic route.
 The syntax highlighting theme for code blocks can be adjusted somewhat, but it is best to find a theme where the actual text/code is desirable. The background and border can be adjusted. */
-export default function post({
-  params,
-}: {
-  params: { slug: string };
-}): JSX.Element {
+export default function post({ params }: { params: { slug: string } }) {
   const { slug: route } = params;
   //this determines if clicking the back button returns the user to the blog page or at the specific blog in the list of blogs. When false, it will just return to the blog page
   let findInList = true;
@@ -91,8 +90,11 @@ export default function post({
         </div>
 
         {/* Metadata */}
-        <div className="flex flex-col max-w-[700px] w-full mt-14 gap-2">
-          <p className="text-sm">{formatDate(data.date)}</p>
+        <div className="flex flex-col max-w-[700px] w-full mt-14 gap-6">
+          <div className="text-sm flex w-[95%] justify-between">
+            <p>{formatDate(data.date)}</p>
+            <Views route={data.route} />
+          </div>
           <h1 className="sm:text-5xl text-4xl font-bold">{data.title}</h1>
           <div className="flex gap-10 text-lg font-medium">
             <p>{data.author}</p>
@@ -198,4 +200,11 @@ export default function post({
       <div className="w-full h-10 bg-gradient-to-b from-white to-dgreen absolute bottom-0"></div>
     </div>
   );
+}
+
+let incrementViews = cache(increment);
+
+export async function Views({ route }: { route: string }) {
+  incrementViews(route);
+  return <ViewCounter route={route} />
 }

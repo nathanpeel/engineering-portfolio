@@ -28,13 +28,16 @@ export type blogPostType = {
     date: string, //YYYY-MM-DD format
     author: string,
     summary: string,
-    tags: string[]
+    tags: string[],
   }
 }
+
+
 function getMarkdownData(markdown: string): blogPostType {
   //deconstruct to escape library types
   const { content, data } = matter(markdown)
   const { title, route, date, author, summary, tags } = data;
+
   return {
     content, data: {
       title,
@@ -47,13 +50,13 @@ function getMarkdownData(markdown: string): blogPostType {
 }
 
 /** function that combines the extractText and getMarkdownData functions into one for use in components **/
-export function getBlogPost(fileName: string): blogPostType | false {
+export function getBlogPost(fileName: string): blogPostType {
   const text = extractText(fileName);
   if (typeof text === 'string') {
     
     return getMarkdownData(text);
   } else {
-    return false;
+    throw new Error(`Could not find blog post with fileName: ${fileName}`);
   }
 }
 
@@ -67,12 +70,10 @@ export function formatDate(dateString: string):string {
 //return an array of all the blog posts in object format sorted from newest to oldest
 export function getSortedBlogPosts(): blogPostType[] {
   const blogPostArray: blogPostType[] = []
-  getMarkdownFileNames().map((filename) => {
-    const post = getBlogPost(filename);
-    if (post) {
-      blogPostArray.push(post);
-    }
+  getMarkdownFileNames().forEach((filename) => {
+    blogPostArray.push(getBlogPost(filename));
   });
+  
   blogPostArray.sort((a, b) => {
     const dateA: Date = new Date(a.data.date);
     const dateB: Date = new Date(b.data.date);

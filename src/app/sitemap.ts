@@ -2,7 +2,9 @@ import { MetadataRoute } from "next";
 import { getSortedBlogPosts } from "./blog/utils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const blogs = getSortedBlogPosts().map((post) => ({
+  const sortedPosts = getSortedBlogPosts();
+
+  const blogs = sortedPosts.map((post) => ({
     url: `https://nathanpeel.dev/blog/${post.data.route}`,
     lastModified: post.data.date,
   }));
