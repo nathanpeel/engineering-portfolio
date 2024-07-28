@@ -204,7 +204,7 @@ export default function post({ params }: { params: { slug: string } }) {
 
 let incrementViews = cache(increment);
 
-export async function Views({ route }: { route: string }) {
+async function Views({ route }: { route: string }) {
   incrementViews(route);
   return <ViewCounter route={route} />
 }
