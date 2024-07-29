@@ -16,7 +16,7 @@ type blogPost = {
 type RoutesArray = [string, ...string[]] & { length: 1 | 2 | 3 };
 
 // add routes to featured blogs HERE. 3 MAX
-const routes: RoutesArray = ["shelph", "mydadtaughtengineering"];
+const routes: RoutesArray = ["learningforswe", "mydadtaughtengineering"];
 
 type props = {
   dark?: boolean;
