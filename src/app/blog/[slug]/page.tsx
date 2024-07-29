@@ -102,7 +102,7 @@ export default function post({ params }: { params: { slug: string } }) {
           <p className="text-base">{data.summary}</p>
         </div>
         <div>
-          <div className="text-sm py-10 max-w-[700px]">
+          <div className="text-sm py-10 max-w-[700px] mb-20">
             {/* Blog Content */}
             <Markdown
               components={{
