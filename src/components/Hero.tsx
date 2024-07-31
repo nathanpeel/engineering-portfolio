@@ -8,8 +8,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Hero() {
   return (
     <section className="relative pb-32 min-h-dvh flex flex-col justify-center">
-      <div className="bg-gradient-radial rounded-full from-lgreen/30 via-transparent to-transparent w-[150%] h-[150%] absolute -top-[55dvh] -left-[90dvw] pointer-events-none -z-100"></div>
-      <div className="bg-gradient-radial rounded-full from-lblue/40 via-transparent to-transparent w-[150%] h-[150%] absolute -bottom-[50dvh] -right-[80dvw] pointer-events-none -z-100"></div>
+      <div className="bg-gradient-radial rounded-full from-lgreen/45 via-transparent to-transparent w-[150%] h-[150%] absolute -top-[55dvh] -left-[90dvw] pointer-events-none -z-100 animate-up-down-s1 sm:animate-up-down-l1"></div>
+      <div className="bg-gradient-radial rounded-full from-lblue/45 via-transparent to-transparent w-[150%] h-[150%] absolute -bottom-[50dvh] -right-[80dvw] pointer-events-none -z-100 animate-up-down-s2 sm:animate-up-down-l2"></div>
       <FadeIn>
         <div className="flex flex-col items-center justify-center">
           <TextGradient styles="md:text-8xl sm:text-7xl text-5xl font-bold">
@@ -23,13 +23,13 @@ export default function Hero() {
               href="https://www.linkedin.com/in/nathaniel-peel/"
               target="_blank"
               className="hover:scale-125 transition-all ease-linear">
-              <FaLinkedin className="w-10 h-10"/>
+              <FaLinkedin className="w-10 h-10" />
             </Link>
             <Link
               href="https://github.com/nathanpeel"
               target="_blank"
               className="hover:scale-125 transition-all ease-linear">
-              <FaGithub className="w-10 h-10"/>
+              <FaGithub className="w-10 h-10" />
             </Link>
           </div>
         </div>

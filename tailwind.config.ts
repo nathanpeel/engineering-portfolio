@@ -16,11 +16,22 @@ const config: Config = {
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": {backgroundPosition: "100% 50%"}
-
-        }
+        },
+        'up-down-l': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-300px)' },
+        },
+        'up-down-s': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-150px)' },
+        },
       },
       animation: {
-        gradient: "gradient 3s linear infinite"
+        gradient: "gradient 3s linear infinite",
+        "up-down-s1": 'up-down-s 3.2s ease-in-out infinite 0.8s',
+        "up-down-s2": 'up-down-s 3.2s ease-in-out infinite',
+        "up-down-l1": 'up-down-l 3.2s ease-in-out infinite 0.8s',
+        "up-down-l2": 'up-down-l 3.2s ease-in-out infinite',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
