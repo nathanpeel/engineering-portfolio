@@ -30,7 +30,7 @@ export default function Blog(): JSX.Element {
               Tech & Reason
             </TextGradient>
             <p className="sm:text-base">
-              Focussing on Software Engineering and Computer Science while
+              Focusing on Software Engineering and Computer Science while
               incorporating philosophy and commenting on the culture and
               lifestyle of the SWE and CS profession.
             </p>
